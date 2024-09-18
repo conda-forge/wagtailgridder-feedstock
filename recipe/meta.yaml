@@ -1,5 +1,5 @@
 {% set name = "wagtailgridder" %}
-{% set version = "1.0.5" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtailgridder-{{ version }}.tar.gz
-  sha256: a785bf6c3f2456fa5421296bb23fffa8584fd549ed81eec0437cad45e9311368
+  sha256: b37ccae6265225624944802c73d5df81bfd3c998522941526a9283bcb6d77b1f
 
 build:
   noarch: python
@@ -22,8 +22,9 @@ requirements:
     - wheel
     - pip
   run:
+    - wagtail-modeladmin
     - python >=3.8
-    - wagtail >=3
+    - wagtail >=4.1
 
 test:
   imports:
