@@ -1,5 +1,5 @@
 {% set name = "wagtailgridder" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wagtailgridder-{{ version }}.tar.gz
-  sha256: b37ccae6265225624944802c73d5df81bfd3c998522941526a9283bcb6d77b1f
+  sha256: e50cfb74de403560848140c422311aa8b36ef728aae68c8be5a55b8cfc2c9c24
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
